@@ -1,0 +1,1005 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<title>Labeeh</title>
+	<link href="img/fav.png" rel="shortcut icon" type="image/x-icon">
+
+
+
+
+	<!-- ***** Boostrap Custom / Addons Stylesheets ***** -->
+	<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" type="text/css" media="all">
+	<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap-select.css">
+
+	<!--<link rel="stylesheet" href="css/template.css" type="text/css" media="all">-->
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/category.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="css/custom.css"> <!-- Resource style -->
+	<!-- Custom styles for this template -->
+    <link href="css/template.css" rel="stylesheet">
+
+    <!-- jQuery Popup Css -->
+  	<link rel="stylesheet" href="vendor/remodal/css/remodal.css">
+  	<link rel="stylesheet" href="vendor/remodal/css/remodal-default-theme.css">
+    
+    <!-- Ion Range Slider CSS -->
+    <link rel="stylesheet" href="vendor/ion.rangeslider/ion.rangeSlider.css" />
+    <link rel="stylesheet" href="vendor/ion.rangeslider/ion.rangeSlider.skinFlat.css" />
+     
+	
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+  	
+</head>
+<body id="page-top" class="category-search-result">
+	<header>
+    	<div class="top-bar_wrapper">	
+			<div class="container">
+				<div class="top-bar dilb">
+					<div class="col-xs-12 pull-right">
+						<div class="userLinks ">
+							<a class="dropdown-toggle" href="#" id="language" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Language
+							  <span class="fa fa-sort-desc dilb"></span></a>
+							  <div class="dropdown-menu scrollbar dd-language" aria-labelledby="language">
+								<a class="dropdown-item text-left" href="#">&nbsp;&nbsp;Arabic</a>
+								<a class="dropdown-item text-left" href="#">&nbsp;&nbsp;English</a>
+							  </div>
+							<a href="#signIn_option" class="login">Login</a> 
+							
+							<a href="register.html" class="register"> Signup </a>
+						</div>
+						<span class="userLinks d-none"><a href="#" class="postLink ripple-button">Post an Job</a></span>						
+
+					</div>
+					<div class="remodal" data-remodal-id="signIn_option" role="dialog" aria-labelledby="signIn_option_Title">
+						<button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+						<div class="row">
+							<div class="col-md-12">
+								<!--/ LOGIN FORM START -->
+									<div class="login_form">
+										<h4 class="bold">Labeeh Sign-In</h4>
+										<form id="form-login" class="p-t-15" role="form" action="index.html">
+										<!-- START Form Control-->
+										<div class="form-group form-group-default">
+										  <label>Login</label>
+										  <div class="controls">
+											<input type="text" name="username" placeholder="User Name" class="form-control" required>
+										  </div>
+										</div>
+										<!-- END Form Control-->
+										<!-- START Form Control-->
+										<div class="form-group form-group-default">
+										  <label>Password</label>
+										  <div class="controls">
+											<input type="password" class="form-control" name="password" placeholder="Credentials" required>
+										  </div>
+										</div>
+										<!-- START Form Control-->
+										<div class="row pull-left w-100">
+										  <div class="col-md-7 no-padding">
+											<div class="checkbox">
+											  <input type="checkbox" value="1" id="checkbox1">
+											  <label for="checkbox1"><small>Keep Me Signed in</small></label>
+											</div>
+										  </div>
+										  <div class="col-md-5 no-padding pull-left text-right">
+											<a href="#" class="text-info text_support small">Help? Contact Support</a>
+										  </div>
+										</div>
+										<!-- END Form Control-->
+										<div class="row pull-left w-100 text-center">
+											<div class="col-md-12">
+												<button class="btn m-t-10 ripple-button" type="submit">Sign in</button><small class="pl-2"> or<br></small>
+												<a href="register.html" class="dilb small text-muted mb-3" >Create a Labeeh account</a>
+											</div>
+										</div>
+
+
+
+										<!-- Big Social new style element section -->
+										<p class="bold text-center">Or Signin using:</p>
+										<section class="margin-bottom-15 pt-2 pb-2">
+											<div class="justify-content-center w-100 dilb">
+												<!-- /.socialbox -->
+												<a href="#" target="_blank" class="socialbox sb-google-plus col-sm-6">
+													<span class="kl-icon "><span class="fa-fw fa fa-google-plus ">  </span><span>&nbsp;| GOOGLE </span></span>
+	<!--															<span class="fan-count"><span>1,051</span>FOLLOWERS</span>-->
+												</a>
+												<!-- /.socialbox -->
+
+												<a href="#" target="_blank" class="socialbox sb-facebook col-sm-6">
+													<span class="kl-icon"><span class="fa fa-facebook-f"></span><span> &nbsp; | FACEBOOK</span></span>
+	<!--															<span class="fan-count"><span>1,685</span>FOLLOWERS</span>-->
+												</a>
+												<!-- /.socialbox -->
+											</div>
+											<!-- /.container-fluid -->
+										</section>
+										<!--/ Big Social new style element section -->
+										</form>
+									</div>
+									<!--/ LOGIN FORM END -->
+
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!-- /.container -->
+		</div><!--/ Top Bar End -->
+
+		<!-- Navigation -->
+		<nav class="navbar navbar-expand-lg" id="mainNav" data-toggle="affix">
+		  <div class="container">
+			<a class="navbar-brand js-scroll-trigger" href="index.html"><img src="img/logo.png" width="80px"></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+			  <ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+				  <a class="nav-link js-scroll-trigger" href="index.html#home">Home</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link js-scroll-trigger" href="about-us.html">About us</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link js-scroll-trigger" href="index.html#how_labeeh_works">How LABEEH works?</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link js-scroll-trigger" href="index.html#packages">Packages</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link js-scroll-trigger" href="index.html#contact">Contact us</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link js-scroll-trigger" href="faqs.html">FAQs</a>
+				</li>
+			  </ul>
+			</div>
+		  </div>
+		</nav>
+    </header>
+    
+
+    	
+	
+	<div class="clearfix"></div>
+   
+   
+   		
+   <div class="clearfix"></div>
+   <div id="category-page" class="pb-0">
+   	  <section class="p-0">
+     	
+		  <div class="container">
+			 <div class="section-heading position-relative text-center">
+				<div class="page-title border-0">
+					<h1 class="text-white text-center ">. Search Results .</h1>
+					<span class="line-seperator-center"></span>
+				</div>
+<!--
+				<div class="searchBar-wrapper p-0">
+					<div class="container">		
+						<div class="searchBar">
+
+							<li class="searchFor col-md-7 pull-left">
+								<input type="text" placeholder="I am looking for..." width="100%;" class="border-0">
+							</li>
+							<li class="searchLocation col-md-3 no-padding pull-left">
+								<input type="text" placeholder="Location" >
+							</li>
+							<li class="searchBtn col-md-2 no-padding pull-left ">
+								<a href="#" class="ripple-button">Search</a>
+							</li>
+
+						</div>
+					</div>
+				</div>
+-->
+			</div>
+
+		  </div>
+		</section>
+	</div>
+	<div class="container">
+	<main class="cd-main-content col-md-12" >
+		
+		<section class="cd-gallery col-sm-12 p-4 filter-is-visible ">
+			<ul>
+				<li class="mix color-1 check1 radio2 option3 col-lg-4 col-sm-6 p-0">
+					<div class="card-wrapper">
+						<div class="card-body p-0">
+							<a href="#">
+								<div class="card-media">
+									<div class="card-img-top">
+										<img src="img/service/service2.jpg" class="gig-thumbnail">
+									</div>
+								</div>
+							</a>
+							<span class="card-featured-badge d-none"></span>
+							<span class="card-featured-badge d-none"></span>
+							<div class="card-caption">
+								<div class="card-link col-8 p-0">
+									<a href="#" rel="nofollow"><h4>I will edit or write any kind of document</h4></a>
+									<span class="text-grey card-place small">Abu Dhabi</span>
+									
+								</div>
+								<div class="seller-info col-4 p-0">
+									<span class="seller-avatar">
+										<img src="img/sellers/img3.png" width="32px" height="32px">
+									</span>
+									<a href="#" rel="nofollow" class="seller-name">sandycharity</a>
+									<div class="seller-badge">
+										<span class="seller-level">Level 1 Seller</span>
+										
+									</div>
+									<span class="seller-rating">
+<!--									<svg class="fit-svg-icon full_star yellow" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg" width="15" height="15"><path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"></path></svg>-->
+									<div class="rating-stars">
+										<a><i class="fa fa-star"></i></a>
+										<a><i class="fa fa-star"></i></a>
+										<a><i class="fa fa-star"></i></a>
+										<a><i class="fa fa-star"></i></a>
+										<a><i class="fa fa-star"></i></a>
+									</div>	
+										
+									<span><strong>5.0</strong><!-- react-text: 25 --> <!-- /react-text --><!-- react-text: 26 -->(15)<!-- /react-text --></span>
+								</span>
+								</div>
+								
+								
+							</div>
+							<footer class="card-footer">
+								<div class="card-button">
+									<span class="d-none"><a class="icn-heart-toggle hint--top" href="#"><i class="fa fa-fw fa-bars"></i></a></span>
+									<a href="#"><i class="fa fa-fw fa-heart"></i></a>
+								</div>
+								<div class="card-price-badge">
+									<a href="#"><small>From</small>$5</a>
+								</div>
+							</footer>
+						</div>
+					</div>
+				</li>
+				<li class="mix color-2 check2 radio2 option2 col-lg-4 col-sm-6 p-0">
+					<div class="card-wrapper">
+						<div class="card-body p-0 featured-service">
+							<a href="#">
+								<div class="card-media">
+									<div class="card-img-top">
+										<img src="img/service/service2.jpg" class="gig-thumbnail">
+									</div>
+								</div>
+							</a>
+							<span class="card-featured-badge "></span>
+							<span class="card-premium-badge d-none"></span>
+							<div class="card-caption">
+								<div class="card-link col-8 p-0">
+									<a href="#" rel="nofollow"><h4>I will edit or write any kind of document</h4></a>
+									<span class="text-grey card-place small">Abu Dhabi</span>
+									
+								</div>
+								<div class="seller-info col-4 p-0">
+									<span class="seller-avatar">
+										<img src="img/sellers/img3.png" width="32px" height="32px">
+									</span>
+									<a href="#" rel="nofollow" class="seller-name">sandycharity</a>
+									<div class="seller-badge">
+										<span class="seller-level">Level 1 Seller</span>
+									</div>
+									<span class="seller-rating">
+										<div class="rating-stars">
+											<a><i class="fa fa-star"></i></a>
+											<a><i class="fa fa-star"></i></a>
+											<a><i class="fa fa-star"></i></a>
+											<a><i class="fa fa-star"></i></a>
+											<a><i class="fa fa-star"></i></a>
+										</div>	
+										<span><strong>5.0</strong><!-- react-text: 25 --> <!-- /react-text --><!-- react-text: 26 -->(15)<!-- /react-text --></span>
+<!--									<svg class="fit-svg-icon full_star yellow" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg" width="15" height="15"><path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"></path></svg>-->
+									
+								</span>
+								</div>
+								
+								
+							</div>
+							<footer class="card-footer">
+								<div class="card-button">
+									<span class="d-none"><a class="icn-heart-toggle hint--top" href="#"><i class="fa fa-fw fa-bars"></i></a></span>
+									<a href="#"><i class="fa fa-fw fa-heart"></i></a>
+								</div>
+								<div class="card-price-badge">
+									<a href="#"><small>From</small>$5</a>
+								</div>
+							</footer>
+						</div>
+					</div>
+				</li>
+				<li class="mix color-1 check3 radio3 option1 col-lg-4 col-sm-6 p-0">
+					<div class="card-wrapper">
+						<div class="card-body p-0">
+							<a href="#">
+								<div class="card-media">
+									<div class="card-img-top">
+										<img src="img/service/service2.jpg" class="gig-thumbnail">
+									</div>
+								</div>
+							</a>
+							<span class="card-featured-badge d-none"></span>
+							<span class="card-featured-badge d-none"></span>
+							<div class="card-caption">
+								<div class="card-link col-8 p-0">
+									<a href="#" rel="nofollow"><h4>I will edit or write any kind of document</h4></a>
+									<span class="text-grey card-place small">Abu Dhabi</span>
+									
+								</div>
+								<div class="seller-info col-4 p-0">
+									<span class="seller-avatar">
+										<img src="img/sellers/img3.png" width="32px" height="32px">
+									</span>
+									<a href="#" rel="nofollow" class="seller-name">sandycharity</a>
+									<div class="seller-badge">
+										<span class="seller-level">Level 1 Seller</span>
+										
+									</div>
+									<span class="seller-rating">
+<!--									<svg class="fit-svg-icon full_star yellow" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg" width="15" height="15"><path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"></path></svg>-->
+									<div class="rating-stars">
+										<a><i class="fa fa-star"></i></a>
+										<a><i class="fa fa-star"></i></a>
+										<a><i class="fa fa-star"></i></a>
+										<a><i class="fa fa-star"></i></a>
+										<a><i class="fa fa-star"></i></a>
+									</div>	
+										
+									<span><strong>5.0</strong><!-- react-text: 25 --> <!-- /react-text --><!-- react-text: 26 -->(15)<!-- /react-text --></span>
+								</span>
+								</div>
+								
+								
+							</div>
+							<footer class="card-footer">
+								<div class="card-button">
+									<span class="d-none"><a class="icn-heart-toggle hint--top" href="#"><i class="fa fa-fw fa-bars"></i></a></span>
+									<a href="#"><i class="fa fa-fw fa-heart"></i></a>
+								</div>
+								<div class="card-price-badge">
+									<a href="#"><small>From</small>$5</a>
+								</div>
+							</footer>
+						</div>
+					</div>
+				</li>
+				<li class="mix color-1 check3 radio2 option4 col-lg-4 col-sm-6 p-0">
+					<div class="card-wrapper">
+						<div class="card-body p-0">
+							<a href="#">
+								<div class="card-media">
+									<div class="card-img-top">
+										<img src="img/service/service2.jpg" class="gig-thumbnail">
+									</div>
+								</div>
+							</a>
+							<span class="card-featured-badge d-none"></span>
+							<span class="card-featured-badge d-none"></span>
+							<div class="card-caption">
+								<div class="card-link col-8 p-0">
+									<a href="#" rel="nofollow"><h4>I will edit or write any kind of document</h4></a>
+									<span class="text-grey card-place small">Abu Dhabi</span>
+									
+								</div>
+								<div class="seller-info col-4 p-0">
+									<span class="seller-avatar">
+										<img src="img/sellers/img3.png" width="32px" height="32px">
+									</span>
+									<a href="#" rel="nofollow" class="seller-name">sandycharity</a>
+									<div class="seller-badge">
+										<span class="seller-level">Level 1 Seller</span>
+										
+									</div>
+									<span class="seller-rating">
+<!--									<svg class="fit-svg-icon full_star yellow" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg" width="15" height="15"><path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"></path></svg>-->
+									<div class="rating-stars">
+										<a><i class="fa fa-star"></i></a>
+										<a><i class="fa fa-star"></i></a>
+										<a><i class="fa fa-star"></i></a>
+										<a><i class="fa fa-star"></i></a>
+										<a><i class="fa fa-star"></i></a>
+									</div>	
+										
+									<span><strong>5.0</strong><!-- react-text: 25 --> <!-- /react-text --><!-- react-text: 26 -->(15)<!-- /react-text --></span>
+								</span>
+								</div>
+								
+								
+							</div>
+							<footer class="card-footer">
+								<div class="card-button">
+									<span class="d-none"><a class="icn-heart-toggle hint--top" href="#"><i class="fa fa-fw fa-bars"></i></a></span>
+									<a href="#"><i class="fa fa-fw fa-heart"></i></a>
+								</div>
+								<div class="card-price-badge">
+									<a href="#"><small>From</small>$5</a>
+								</div>
+							</footer>
+						</div>
+					</div>
+				</li>
+				<li class="mix color-1 check1 radio3 option2 col-lg-4 col-sm-6 p-0">
+					<div class="card-wrapper">
+						<div class="card-body p-0">
+							<a href="#">
+								<div class="card-media">
+									<div class="card-img-top">
+										<img src="img/service/service2.jpg" class="gig-thumbnail">
+									</div>
+								</div>
+							</a>
+							<span class="card-featured-badge d-none"></span>
+							<span class="card-featured-badge d-none"></span>
+							<div class="card-caption">
+								<div class="card-link col-8 p-0">
+									<a href="#" rel="nofollow"><h4>I will edit or write any kind of document</h4></a>
+									<span class="text-grey card-place small">Abu Dhabi</span>
+									
+								</div>
+								<div class="seller-info col-4 p-0">
+									<span class="seller-avatar">
+										<img src="img/sellers/img3.png" width="32px" height="32px">
+									</span>
+									<a href="#" rel="nofollow" class="seller-name">sandycharity</a>
+									<div class="seller-badge">
+										<span class="seller-level">Level 1 Seller</span>
+										
+									</div>
+									<span class="seller-rating">
+<!--									<svg class="fit-svg-icon full_star yellow" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg" width="15" height="15"><path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"></path></svg>-->
+									<div class="rating-stars">
+										<a><i class="fa fa-star"></i></a>
+										<a><i class="fa fa-star"></i></a>
+										<a><i class="fa fa-star"></i></a>
+										<a><i class="fa fa-star"></i></a>
+										<a><i class="fa fa-star"></i></a>
+									</div>	
+										
+									<span><strong>5.0</strong><!-- react-text: 25 --> <!-- /react-text --><!-- react-text: 26 -->(15)<!-- /react-text --></span>
+								</span>
+								</div>
+								
+								
+							</div>
+							<footer class="card-footer">
+								<div class="card-button">
+									<span class="d-none"><a class="icn-heart-toggle hint--top" href="#"><i class="fa fa-fw fa-bars"></i></a></span>
+									<a href="#"><i class="fa fa-fw fa-heart"></i></a>
+								</div>
+								<div class="card-price-badge">
+									<a href="#"><small>From</small>$5</a>
+								</div>
+							</footer>
+						</div>
+					</div>
+				</li>
+				<li class="mix color-2 check2 radio2 option1 col-lg-4 col-sm-6 p-0">
+					<div class="card-wrapper">
+						<div class="card-body p-0">
+							<a href="#">
+								<div class="card-media">
+									<div class="card-img-top">
+										<img src="img/service/service2.jpg" class="gig-thumbnail">
+									</div>
+								</div>
+							</a>
+							<span class="card-featured-badge d-none"></span>
+							<span class="card-featured-badge d-none"></span>
+							<div class="card-caption">
+								<div class="card-link col-8 p-0">
+									<a href="#" rel="nofollow"><h4>I will edit or write any kind of document</h4></a>
+									<span class="text-grey card-place small">Abu Dhabi</span>
+									
+								</div>
+								<div class="seller-info col-4 p-0">
+									<span class="seller-avatar">
+										<img src="img/sellers/img3.png" width="32px" height="32px">
+									</span>
+									<a href="#" rel="nofollow" class="seller-name">sandycharity</a>
+									<div class="seller-badge">
+										<span class="seller-level">Level 1 Seller</span>
+										
+									</div>
+									<span class="seller-rating">
+<!--									<svg class="fit-svg-icon full_star yellow" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg" width="15" height="15"><path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"></path></svg>-->
+									<div class="rating-stars">
+										<a><i class="fa fa-star"></i></a>
+										<a><i class="fa fa-star"></i></a>
+										<a><i class="fa fa-star"></i></a>
+										<a><i class="fa fa-star"></i></a>
+										<a><i class="fa fa-star"></i></a>
+									</div>	
+										
+									<span><strong>5.0</strong><!-- react-text: 25 --> <!-- /react-text --><!-- react-text: 26 -->(15)<!-- /react-text --></span>
+								</span>
+								</div>
+								
+								
+							</div>
+							<footer class="card-footer">
+								<div class="card-button">
+									<span class="d-none"><a class="icn-heart-toggle hint--top" href="#"><i class="fa fa-fw fa-bars"></i></a></span>
+									<a href="#"><i class="fa fa-fw fa-heart"></i></a>
+								</div>
+								<div class="card-price-badge">
+									<a href="#"><small>From</small>$5</a>
+								</div>
+							</footer>
+						</div>
+					</div>
+				</li>
+				<li class="mix color-2 check2 radio3 option3 col-lg-4 col-sm-6 p-0">
+					<div class="card-wrapper">
+						<div class="card-body p-0 premium-service">
+							<a href="#">
+								<div class="card-media">
+									<div class="card-img-top">
+										<img src="img/service/service2.jpg" class="gig-thumbnail">
+									</div>
+								</div>
+							</a>
+							<span class="card-featured-badge d-none"></span>
+							<span class="card-premium-badge"></span>
+							<div class="card-caption">
+								<div class="card-link col-8 p-0">
+									<a href="#" rel="nofollow"><h4>I will edit or write any kind of document</h4></a>
+									<span class="text-grey card-place small">Abu Dhabi</span>
+									
+								</div>
+								<div class="seller-info col-4 p-0">
+									<span class="seller-avatar">
+										<img src="img/sellers/img3.png" width="32px" height="32px">
+									</span>
+									<a href="#" rel="nofollow" class="seller-name">sandycharity</a>
+									<div class="seller-badge">
+										<span class="seller-level">Level 1 Seller</span>
+									</div>
+									<span class="seller-rating">
+										<div class="rating-stars">
+											<a><i class="fa fa-star"></i></a>
+											<a><i class="fa fa-star"></i></a>
+											<a><i class="fa fa-star"></i></a>
+											<a><i class="fa fa-star"></i></a>
+											<a><i class="fa fa-star"></i></a>
+										</div>	
+										<span><strong>5.0</strong><!-- react-text: 25 --> <!-- /react-text --><!-- react-text: 26 -->(15)<!-- /react-text --></span>
+<!--									<svg class="fit-svg-icon full_star yellow" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg" width="15" height="15"><path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"></path></svg>-->
+									
+								</span>
+								</div>
+								
+								
+							</div>
+							<footer class="card-footer">
+								<div class="card-button">
+									<span class="d-none"><a class="icn-heart-toggle hint--top" href="#"><i class="fa fa-fw fa-bars"></i></a></span>
+									<a href="#"><i class="fa fa-fw fa-heart"></i></a>
+								</div>
+								<div class="card-price-badge">
+									<a href="#"><small>From</small>$5</a>
+								</div>
+							</footer>
+						</div>
+					</div>
+				</li>
+				
+				<li class="mix color-1 check1 radio3 option4 col-lg-4 col-sm-6 p-0">
+					<div class="card-wrapper">
+						<div class="card-body p-0">
+							<a href="#">
+								<div class="card-media">
+									<div class="card-img-top">
+										<img src="img/service/service2.jpg" class="gig-thumbnail">
+									</div>
+								</div>
+							</a>
+							<span class="card-featured-badge d-none"></span>
+							<span class="card-featured-badge d-none"></span>
+							<div class="card-caption">
+								<div class="card-link col-8 p-0">
+									<a href="#" rel="nofollow"><h4>I will edit or write any kind of document</h4></a>
+									<span class="text-grey card-place small">Abu Dhabi</span>
+									
+								</div>
+								<div class="seller-info col-4 p-0">
+									<span class="seller-avatar">
+										<img src="img/sellers/img3.png" width="32px" height="32px">
+									</span>
+									<a href="#" rel="nofollow" class="seller-name">sandycharity</a>
+									<div class="seller-badge">
+										<span class="seller-level">Level 1 Seller</span>
+										
+									</div>
+									<span class="seller-rating">
+<!--									<svg class="fit-svg-icon full_star yellow" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg" width="15" height="15"><path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"></path></svg>-->
+									<div class="rating-stars">
+										<a><i class="fa fa-star"></i></a>
+										<a><i class="fa fa-star"></i></a>
+										<a><i class="fa fa-star"></i></a>
+										<a><i class="fa fa-star"></i></a>
+										<a><i class="fa fa-star"></i></a>
+									</div>	
+										
+									<span><strong>5.0</strong><!-- react-text: 25 --> <!-- /react-text --><!-- react-text: 26 -->(15)<!-- /react-text --></span>
+								</span>
+								</div>
+								
+								
+							</div>
+							<footer class="card-footer">
+								<div class="card-button">
+									<span class="d-none"><a class="icn-heart-toggle hint--top" href="#"><i class="fa fa-fw fa-bars"></i></a></span>
+									<a href="#"><i class="fa fa-fw fa-heart"></i></a>
+								</div>
+								<div class="card-price-badge">
+									<a href="#"><small>From</small>$5</a>
+								</div>
+							</footer>
+						</div>
+					</div>
+				</li>
+				<li class="mix color-2 check1 radio2 option3 col-lg-4 col-sm-6 p-0">
+					<div class="card-wrapper">
+						<div class="card-body p-0">
+							<a href="#">
+								<div class="card-media">
+									<div class="card-img-top">
+										<img src="img/service/service2.jpg" class="gig-thumbnail">
+									</div>
+								</div>
+							</a>
+							<span class="card-featured-badge d-none"></span>
+							<span class="card-featured-badge d-none"></span>
+							<div class="card-caption">
+								<div class="card-link col-8 p-0">
+									<a href="#" rel="nofollow"><h4>I will edit or write any kind of document</h4></a>
+									<span class="text-grey card-place small">Abu Dhabi</span>
+									
+								</div>
+								<div class="seller-info col-4 p-0">
+									<span class="seller-avatar">
+										<img src="img/sellers/img3.png" width="32px" height="32px">
+									</span>
+									<a href="#" rel="nofollow" class="seller-name">sandycharity</a>
+									<div class="seller-badge">
+										<span class="seller-level">Level 1 Seller</span>
+										
+									</div>
+									<span class="seller-rating">
+<!--									<svg class="fit-svg-icon full_star yellow" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg" width="15" height="15"><path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"></path></svg>-->
+									<div class="rating-stars">
+										<a><i class="fa fa-star"></i></a>
+										<a><i class="fa fa-star"></i></a>
+										<a><i class="fa fa-star"></i></a>
+										<a><i class="fa fa-star"></i></a>
+										<a><i class="fa fa-star"></i></a>
+									</div>	
+										
+									<span><strong>5.0</strong><!-- react-text: 25 --> <!-- /react-text --><!-- react-text: 26 -->(15)<!-- /react-text --></span>
+								</span>
+								</div>
+								
+								
+							</div>
+							<footer class="card-footer">
+								<div class="card-button">
+									<span class="d-none"><a class="icn-heart-toggle hint--top" href="#"><i class="fa fa-fw fa-bars"></i></a></span>
+									<a href="#"><i class="fa fa-fw fa-heart"></i></a>
+								</div>
+								<div class="card-price-badge">
+									<a href="#"><small>From</small>$5</a>
+								</div>
+							</footer>
+						</div>
+					</div>
+				</li>
+				<li class="mix color-1 check3 radio2 option4 col-lg-4 col-sm-6 p-0">
+					<div class="card-wrapper">
+						<div class="card-body p-0">
+							<a href="#">
+								<div class="card-media">
+									<div class="card-img-top">
+										<img src="img/service/service2.jpg" class="gig-thumbnail">
+									</div>
+								</div>
+							</a>
+							<span class="card-featured-badge d-none"></span>
+							<span class="card-featured-badge d-none"></span>
+							<div class="card-caption">
+								<div class="card-link col-8 p-0">
+									<a href="#" rel="nofollow"><h4>I will edit or write any kind of document</h4></a>
+									<span class="text-grey card-place small">Abu Dhabi</span>
+									
+								</div>
+								<div class="seller-info col-4 p-0">
+									<span class="seller-avatar">
+										<img src="img/sellers/img3.png" width="32px" height="32px">
+									</span>
+									<a href="#" rel="nofollow" class="seller-name">sandycharity</a>
+									<div class="seller-badge">
+										<span class="seller-level">Level 1 Seller</span>
+										
+									</div>
+									<span class="seller-rating">
+<!--									<svg class="fit-svg-icon full_star yellow" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg" width="15" height="15"><path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"></path></svg>-->
+									<div class="rating-stars">
+										<a><i class="fa fa-star"></i></a>
+										<a><i class="fa fa-star"></i></a>
+										<a><i class="fa fa-star"></i></a>
+										<a><i class="fa fa-star"></i></a>
+										<a><i class="fa fa-star"></i></a>
+									</div>	
+										
+									<span><strong>5.0</strong><!-- react-text: 25 --> <!-- /react-text --><!-- react-text: 26 -->(15)<!-- /react-text --></span>
+								</span>
+								</div>
+								
+								
+							</div>
+							<footer class="card-footer">
+								<div class="card-button">
+									<span class="d-none"><a class="icn-heart-toggle hint--top" href="#"><i class="fa fa-fw fa-bars"></i></a></span>
+									<a href="#"><i class="fa fa-fw fa-heart"></i></a>
+								</div>
+								<div class="card-price-badge">
+									<a href="#"><small>From</small>$5</a>
+								</div>
+							</footer>
+						</div>
+					</div>
+				</li>
+				<li class="mix color-1 check3 radio3 option2 col-lg-4 col-sm-6 p-0">
+					<div class="card-wrapper">
+						<div class="card-body p-0">
+							<a href="#">
+								<div class="card-media">
+									<div class="card-img-top">
+										<img src="img/service/service2.jpg" class="gig-thumbnail">
+									</div>
+								</div>
+							</a>
+							<span class="card-featured-badge d-none"></span>
+							<span class="card-featured-badge d-none"></span>
+							<div class="card-caption">
+								<div class="card-link col-8 p-0">
+									<a href="#" rel="nofollow"><h4>I will edit or write any kind of document</h4></a>
+									<span class="text-grey card-place small">Abu Dhabi</span>
+									
+								</div>
+								<div class="seller-info col-4 p-0">
+									<span class="seller-avatar">
+										<img src="img/sellers/img3.png" width="32px" height="32px">
+									</span>
+									<a href="#" rel="nofollow" class="seller-name">sandycharity</a>
+									<div class="seller-badge">
+										<span class="seller-level">Level 1 Seller</span>
+										
+									</div>
+									<span class="seller-rating">
+<!--									<svg class="fit-svg-icon full_star yellow" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg" width="15" height="15"><path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"></path></svg>-->
+									<div class="rating-stars">
+										<a><i class="fa fa-star"></i></a>
+										<a><i class="fa fa-star"></i></a>
+										<a><i class="fa fa-star"></i></a>
+										<a><i class="fa fa-star"></i></a>
+										<a><i class="fa fa-star"></i></a>
+									</div>	
+										
+									<span><strong>5.0</strong><!-- react-text: 25 --> <!-- /react-text --><!-- react-text: 26 -->(15)<!-- /react-text --></span>
+								</span>
+								</div>
+								
+								
+							</div>
+							<footer class="card-footer">
+								<div class="card-button">
+									<span class="d-none"><a class="icn-heart-toggle hint--top" href="#"><i class="fa fa-fw fa-bars"></i></a></span>
+									<a href="#"><i class="fa fa-fw fa-heart"></i></a>
+								</div>
+								<div class="card-price-badge">
+									<a href="#"><small>From</small>$5</a>
+								</div>
+							</footer>
+						</div>
+					</div>
+				</li>
+				<li class="mix color-2 check1 radio3 option1 col-lg-4 col-sm-6 p-0">
+					<div class="card-wrapper">
+						<div class="card-body p-0">
+							<a href="#">
+								<div class="card-media">
+									<div class="card-img-top">
+										<img src="img/service/service2.jpg" class="gig-thumbnail">
+									</div>
+								</div>
+							</a>
+							<span class="card-featured-badge d-none"></span>
+							<span class="card-featured-badge d-none"></span>
+							<div class="card-caption">
+								<div class="card-link col-8 p-0">
+									<a href="#" rel="nofollow"><h4>I will edit or write any kind of document</h4></a>
+									<span class="text-grey card-place small">Abu Dhabi</span>
+									
+								</div>
+								<div class="seller-info col-4 p-0">
+									<span class="seller-avatar">
+										<img src="img/sellers/img3.png" width="32px" height="32px">
+									</span>
+									<a href="#" rel="nofollow" class="seller-name">sandycharity</a>
+									<div class="seller-badge">
+										<span class="seller-level">Level 1 Seller</span>
+										
+									</div>
+									<span class="seller-rating">
+<!--									<svg class="fit-svg-icon full_star yellow" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg" width="15" height="15"><path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"></path></svg>-->
+									<div class="rating-stars">
+										<a><i class="fa fa-star"></i></a>
+										<a><i class="fa fa-star"></i></a>
+										<a><i class="fa fa-star"></i></a>
+										<a><i class="fa fa-star"></i></a>
+										<a><i class="fa fa-star"></i></a>
+									</div>	
+										
+									<span><strong>5.0</strong><!-- react-text: 25 --> <!-- /react-text --><!-- react-text: 26 -->(15)<!-- /react-text --></span>
+								</span>
+								</div>
+								
+								
+							</div>
+							<footer class="card-footer">
+								<div class="card-button">
+									<span class="d-none"><a class="icn-heart-toggle hint--top" href="#"><i class="fa fa-fw fa-bars"></i></a></span>
+									<a href="#"><i class="fa fa-fw fa-heart"></i></a>
+								</div>
+								<div class="card-price-badge">
+									<a href="#"><small>From</small>$5</a>
+								</div>
+							</footer>
+						</div>
+					</div>
+				</li>
+				<li class="gap"></li>
+				<li class="gap"></li>
+				<li class="gap"></li>
+			</ul>
+			<div class="cd-fail-message">No results found</div>
+		</section> <!-- cd-gallery -->
+
+	</main> <!-- cd-main-content -->
+	</div>
+	<!-- Footer -->
+    <footer class="footer-distributed m-0">
+    	<div class="container">
+    		<div class="row dilb">
+			 <div class="footer-left col-lg-9">
+				<div class="col-lg-4 col-md-6 float-left">
+					<h3 class="mb-3"><img src="img/logo.png" width="90px"></h3>
+					<p class="white">Labeeh company was established in 2017. It is an Emirati company located in the heart of Abu Dhabi, to limit all the services of companies and provide them to the public.</p>
+					
+					<div class="footer-icons">
+						<a href="#"><i class="fa fa-facebook"></i></a>
+						<a href="#"><i class="fa fa-twitter"></i></a>
+						<a href="#"><i class="fa fa-linkedin"></i></a>
+						<a href="#"><i class="fa fa-github"></i></a>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 footer-links">
+					<h5>Useful Links</h5>
+					<span class="line-seperator-left"></span>
+					<ul>
+						<li><a href="#home">Home</a></li>
+						<li><a href="about-us.html">About us</a></li>
+						<li><a href="#how_labeeh_works">How Labeeh Works</a></li>
+						<li><a href="#packages">Packages</a></li>
+						<li><a href="#contact">Contact us</a></li>
+						<li><a href="faqs.html">FAQs</a></li>				
+					</ul>
+				</div>
+				<div class="col-lg-5 col-md-6 footer-links">
+					<h5>Services</h5>
+					<span class="line-seperator-left"></span>
+					<div class="row">
+						<ul class="col-sm-6">
+							<li><a href="#">Construction Maintenance</a></li>
+							<li><a href="#">Technology & Electronic</a></li>
+							<li><a href="#">Cleaning Works</a></li>
+							<li><a href="#">Furniture & Decor</a></li>
+							<li><a href="#">Health & Beauty</a></li>
+							<li><a href="#">Travel, Tourism & Rental</a></li>
+						</ul>
+						<ul class="col-sm-6">
+							<li><a href="#">Restaurants </a></li>
+							<li><a href="#">Real Estate</a></li>
+							<li><a href="#">Vehicles</a></li>
+							<li><a href="#">Arts & Crafts</a></li>
+							<li><a href="#">Business </a></li>
+							<li><a href="#">Fashion </a></li>
+						</ul>
+					</div>
+					
+				</div>
+				
+			</div>
+
+			<div class="footer-right col-md-3">
+				<div class="dilb w-100">
+					<h5 class="white">Contact Us</h5>
+				<span class="line-seperator-left float-left"></span>
+				</div>
+				
+				<div class="pull-left">
+					<p><a href="#" class=""><i class="fa fa-fw fa-envelope mr-2"></i> example@labeeh.co.uae</a></p>
+					<p><a href="#" class=""><i class="fa fa-fw fa-phone mr-2"></i> +971 1234 567</a></p>
+				</div>	
+<!--
+				<form id="contact" action="#" method="post">
+					<div class="form-group">
+						<input type="text" class="form-control" name="email" placeholder="Email" />
+						<textarea name="message" class="form-control" placeholder="Message"></textarea>
+						<button class="btn btn-red form-control">Send</button>
+					</div>
+					
+
+				</form>
+-->
+
+			</div>		
+		</div>
+		
+		<div class="col-md-12 footer-company-name mt-3">
+			<p class="footer-company-name">Copyright &copy; <a href="http://www.labeeh.com">Labeeh.com</a> 2018. </p>
+		</div>
+    	</div>
+		 
+		
+	</footer>
+	
+	<!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="assets/plugins/js/jquery.validate.min.js" type="text/javascript"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Custom JavaScript for this theme -->
+    <script src="js/scrolling-nav.js"></script>
+    <!-- jQuery Dialog -->
+  	<script src="vendor/remodal/js/remodal.js"></script>
+  	<script src="js/custom.js"></script>
+	<script src="js/jquery.mixitup.min.js"></script>
+	<script src="js/category.js"></script> <!-- Resource jQuery -->
+	
+	<!-- Ion Range Slider JS -->
+  	<script src="vendor/ion.rangeslider/ion.rangeSlider.js"></script>
+  	
+  	<script>
+		$(function () {
+
+			$("#range").ionRangeSlider({
+				hide_min_max: true,
+				keyboard: true,
+				min: 0,
+				max: 5000,
+				from: 1000,
+				to: 4000,
+				type: 'double',
+				step: 1,
+				prefix: "$",
+				grid: true
+			});
+
+		});
+	</script>
+	
+</body>
+</html>

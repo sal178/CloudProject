@@ -1,0 +1,81 @@
+/* NOTIFICATION PAGE
+/*==============================================================*/
+
+.notiTopBar-wrapper {
+	background-color: white;
+    box-shadow: 0px 0px 4px rgba(0,0,0,.5);
+	top: 45px !important;
+}
+.notiTopBar { float: left; width: 100%; }
+
+.notiTopBar  .info { float: left; width: 50%;}
+.notiTopBar  .info p { 
+    float: left;
+    margin: 0px;
+    line-height: 12px;
+    width: 110px;
+}
+.notiTopBar  .info i { 
+	width: 25px;
+    height: 25px;
+    float: left;
+	margin-right: 5px;
+	font-size: 24px;
+}
+.notiTopBar .order-status { 
+	position: relative;
+    padding-left: 50px;
+    font-size: 24px;
+    line-height: 22px;
+}
+.notiTopBar .order-status:before {
+	font-family: 'Fontawesome';
+	content: "\f00c";
+	font-size: 42px;
+	position: absolute;
+	top: 5px;
+	left: 0;
+	width: 35px;
+	height: 35px;
+}
+
+.review-header a { color: #cd2122; font-size: 14px;}
+.review-header time { font-size: 12px !important; float: left; width: 100%; margin-left: -5px; }
+.order-status-lrg { background-color: #eee; padding: 15px; margin-bottom: 20px;}
+.order-details i { margin-top: 7px; }
+
+.orderBox {
+	float: left; 
+	width: 100%; 
+	background: white; 
+	padding: 15px; 
+}
+.header, .header { text-align: center; }
+.order-status-lrg p{ text-align: center; }
+
+.user-pict {
+	float: left;
+	margin-right: 15px;
+	border-radius: 100%;
+	width: 50px;
+}
+.rating-display {
+	width: 100%;
+	text-align: center;
+}
+.conv-message {
+	float: left;
+	widows: 85%;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	padding: 15px;
+}
+
+.review-breakdown li {
+	float: left;
+	width: 100%;
+	text-align: center;
+	padding: 15px 0px;
+	font-weight: bold;
+	font-size: 16px;
+}

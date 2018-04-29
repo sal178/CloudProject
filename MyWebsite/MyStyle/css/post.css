@@ -1,0 +1,28 @@
+
+/*====================================================================================*/
+ /* Category Research Results
+/*====================================================================================*/
+
+.ssds-checkIn {
+	float: left;
+	width: 100%;
+	text-align: center;
+	padding: 0px 20px;
+	margin-bottom: 20px;
+}
+.ssds-checkIn p {
+	margin: 0px;
+	color: black;
+	text-align: center;
+}
+.ssds-checkIn input {
+	border-width: thin;
+	border-color: black;
+	width: 100%;
+	text-align: center;
+	color: #1AB1EB;
+	line-height: 10px;
+	height: 45px;
+	
+
+}

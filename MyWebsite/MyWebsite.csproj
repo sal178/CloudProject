@@ -1,0 +1,703 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BC5563E2-F288-4BC4-9362-169EEE56274B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyWebsite</RootNamespace>
+    <AssemblyName>MyWebsite</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.7.1\lib\net40\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery.UI.Combined">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.UI.Combined.1.8.20\lib\net40\AspNet.ScriptManager.jQuery.UI.Combined.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.1\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.0.3.12153\lib\net40-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Membership.OpenAuth, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Membership.OpenAuth.1.0.0\lib\net40\Microsoft.AspNet.Membership.OpenAuth.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Manage.aspx" />
+    <Content Include="Account\OpenAuthProviders.ascx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="Activation.aspx" />
+    <Content Include="AddRoom.aspx" />
+    <Content Include="ApprovePrice.aspx" />
+    <Content Include="ApproveRooms.aspx" />
+    <Content Include="ConfRoom.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="css\bootstrap-theme.min.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\style.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Home.aspx" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\room1.jpg" />
+    <Content Include="Images\room2.jpg" />
+    <Content Include="Images\room3.jpg" />
+    <Content Include="Images\room4.jpg" />
+    <Content Include="Images\room5.jpg" />
+    <Content Include="Images\room6.jpg" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\scripts.js" />
+    <Content Include="MyStyle\assets\global\plugins\ion.rangeslider\css\ion.rangeSlider.css" />
+    <Content Include="MyStyle\assets\global\plugins\ion.rangeslider\css\ion.rangeSlider.skinFlat.css" />
+    <Content Include="MyStyle\assets\global\plugins\ion.rangeslider\img\sprite-skin-flat.png" />
+    <Content Include="MyStyle\assets\global\plugins\ion.rangeslider\img\sprite-skin-modern.png" />
+    <Content Include="MyStyle\assets\global\plugins\ion.rangeslider\img\sprite-skin-nice.png" />
+    <Content Include="MyStyle\assets\global\plugins\ion.rangeslider\img\sprite-skin-simple.png" />
+    <Content Include="MyStyle\assets\global\plugins\ion.rangeslider\js\ion.rangeSlider.js" />
+    <Content Include="MyStyle\assets\global\plugins\ion.rangeslider\js\ion.rangeSlider.min.js" />
+    <Content Include="MyStyle\assets\pages\scripts\components-ion-sliders.min.js" />
+    <Content Include="MyStyle\assets\plugins\css\wickedpicker.css" />
+    <Content Include="MyStyle\assets\plugins\fonts\fontello.svg" />
+    <Content Include="MyStyle\assets\plugins\js\jquery.validate.min.js" />
+    <Content Include="MyStyle\assets\plugins\js\pace.min.js" />
+    <Content Include="MyStyle\assets\plugins\js\pages.min.js" />
+    <Content Include="MyStyle\assets\plugins\js\switchery.min.js" />
+    <Content Include="MyStyle\assets\plugins\js\wickedpicker.js" />
+    <Content Include="MyStyle\css\category - Copy.css" />
+    <Content Include="MyStyle\css\category.css" />
+    <Content Include="MyStyle\css\custom.css" />
+    <Content Include="MyStyle\css\faqs.css" />
+    <Content Include="MyStyle\css\font-awesome.min.css" />
+    <Content Include="MyStyle\css\glyphicons.css" />
+    <Content Include="MyStyle\css\index.css" />
+    <Content Include="MyStyle\css\noti.css" />
+    <Content Include="MyStyle\css\post.css" />
+    <Content Include="MyStyle\css\profile.css" />
+    <Content Include="MyStyle\css\reset.css" />
+    <Content Include="MyStyle\css\scrolling-nav.css" />
+    <Content Include="MyStyle\css\search.css" />
+    <Content Include="MyStyle\css\stroke-gap-icons.css" />
+    <Content Include="MyStyle\css\templated.css" />
+    <Content Include="MyStyle\fonts\fontawesome-webfont.svg" />
+    <Content Include="MyStyle\fonts\fontello.svg" />
+    <Content Include="MyStyle\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="MyStyle\fonts\Stroke-Gap-Icons-Webfont\fonts\Stroke-Gap-Icons.svg" />
+    <Content Include="MyStyle\fonts\Stroke-Gap-Icons-Webfont\style.css" />
+    <Content Include="MyStyle\garbage\category-search.html" />
+    <Content Include="MyStyle\img\Abu Dhabi_\01_Zayed_04.jpg" />
+    <Content Include="MyStyle\img\Abu Dhabi_\1519823173_abu_dhabi_33770000_1494255422_imagegallerylightboxlarge.jpg" />
+    <Content Include="MyStyle\img\Abu Dhabi_\2.jpg" />
+    <Content Include="MyStyle\img\Abu Dhabi_\60527-Abu-Dhabi.jpg" />
+    <Content Include="MyStyle\img\Abu Dhabi_\abu-dhabi-70215-7132540.jpg" />
+    <Content Include="MyStyle\img\Abu Dhabi_\Abu-Dhabi-Skyline.jpg" />
+    <Content Include="MyStyle\img\Abu Dhabi_\Abu.Dhabi.original.8450.jpg" />
+    <Content Include="MyStyle\img\Abu Dhabi_\AL-Dar.jpg" />
+    <Content Include="MyStyle\img\Abu Dhabi_\APhomepage.jpg" />
+    <Content Include="MyStyle\img\Abu Dhabi_\Banner1320151746500N_ABU-DHABI-CITY-07.jpg" />
+    <Content Include="MyStyle\img\Abu Dhabi_\Captial-Gate.jpg" />
+    <Content Include="MyStyle\img\Abu Dhabi_\Etihad-Towers-2.jpg" />
+    <Content Include="MyStyle\img\Abu Dhabi_\Home-Banner-3-Big289201572527.jpg" />
+    <Content Include="MyStyle\img\Abu Dhabi_\HQ-en-Abu-Dhabi.jpg" />
+    <Content Include="MyStyle\img\Abu Dhabi_\mosque-615415_1920.jpg" />
+    <Content Include="MyStyle\img\Abu Dhabi_\shutterstock_494443537.jpg" />
+    <Content Include="MyStyle\img\Abu Dhabi_\Viceroy-Hotel.jpg" />
+    <Content Include="MyStyle\img\Abu Dhabi_\WKr00y7.jpg" />
+    <Content Include="MyStyle\img\Abu Dhabi_\Ø§Ù”Ø¨Ø±Ø§Ø¬4.jpg" />
+    <Content Include="MyStyle\img\banner-about.jpg" />
+    <Content Include="MyStyle\img\banner-faq.jpg" />
+    <Content Include="MyStyle\img\banner-home.jpg" />
+    <Content Include="MyStyle\img\banner\image1.jpg" />
+    <Content Include="MyStyle\img\cd-icon-check.svg" />
+    <Content Include="MyStyle\img\cd-icon-filter.svg" />
+    <Content Include="MyStyle\img\con-arrow.svg" />
+    <Content Include="MyStyle\img\fav.png" />
+    <Content Include="MyStyle\img\icons\add-file.png" />
+    <Content Include="MyStyle\img\icons\en.png" />
+    <Content Include="MyStyle\img\icons\icon-construction.png" />
+    <Content Include="MyStyle\img\icons\reg.png" />
+    <Content Include="MyStyle\img\icons\svg\bronze-horseman-statue-b.svg" />
+    <Content Include="MyStyle\img\icons\svg\bronze-horseman-statue-w.svg" />
+    <Content Include="MyStyle\img\icons\svg\royal-crown-b.svg" />
+    <Content Include="MyStyle\img\icons\svg\royal-crown-w.svg" />
+    <Content Include="MyStyle\img\icons\uae.png" />
+    <Content Include="MyStyle\img\icons\Untitled.png" />
+    <Content Include="MyStyle\img\img-1.jpg" />
+    <Content Include="MyStyle\img\img-10.jpg" />
+    <Content Include="MyStyle\img\img-11.jpg" />
+    <Content Include="MyStyle\img\img-12.jpg" />
+    <Content Include="MyStyle\img\img-2.jpg" />
+    <Content Include="MyStyle\img\img-3.jpg" />
+    <Content Include="MyStyle\img\img-4.jpg" />
+    <Content Include="MyStyle\img\img-5.jpg" />
+    <Content Include="MyStyle\img\img-6.jpg" />
+    <Content Include="MyStyle\img\img-7.jpg" />
+    <Content Include="MyStyle\img\img-8.jpg" />
+    <Content Include="MyStyle\img\img-9.jpg" />
+    <Content Include="MyStyle\img\line.svg" />
+    <Content Include="MyStyle\img\logo-black.png" />
+    <Content Include="MyStyle\img\logo.png" />
+    <Content Include="MyStyle\img\map-image.png" />
+    <Content Include="MyStyle\img\placeholder.png" />
+    <Content Include="MyStyle\img\portfolio\01-full.jpg" />
+    <Content Include="MyStyle\img\portfolio\01-thumbnail.jpg" />
+    <Content Include="MyStyle\img\portfolio\02-full.jpg" />
+    <Content Include="MyStyle\img\portfolio\02-thumbnail.jpg" />
+    <Content Include="MyStyle\img\portfolio\03-full.jpg" />
+    <Content Include="MyStyle\img\portfolio\03-thumbnail.jpg" />
+    <Content Include="MyStyle\img\portfolio\04-full.jpg" />
+    <Content Include="MyStyle\img\portfolio\04-thumbnail.jpg" />
+    <Content Include="MyStyle\img\portfolio\05-full.jpg" />
+    <Content Include="MyStyle\img\portfolio\05-thumbnail.jpg" />
+    <Content Include="MyStyle\img\portfolio\06-full.jpg" />
+    <Content Include="MyStyle\img\portfolio\06-thumbnail.jpg" />
+    <Content Include="MyStyle\img\portfolio\post.jpg" />
+    <Content Include="MyStyle\img\register\bg1.jpg" />
+    <Content Include="MyStyle\img\register\bg2.jpg" />
+    <Content Include="MyStyle\img\register\bg3.jpg" />
+    <Content Include="MyStyle\img\register\bg4.jpg" />
+    <Content Include="MyStyle\img\register\bg5.jpg" />
+    <Content Include="MyStyle\img\register\slide1.jpg" />
+    <Content Include="MyStyle\img\register\slide2.jpg" />
+    <Content Include="MyStyle\img\register\slide3.jpg" />
+    <Content Include="MyStyle\img\register\slide4.jpg" />
+    <Content Include="MyStyle\img\register\slide5.jpg" />
+    <Content Include="MyStyle\img\register\slide7.jpg" />
+    <Content Include="MyStyle\img\search-placeholder.jpg" />
+    <Content Include="MyStyle\img\section\image1.jpg" />
+    <Content Include="MyStyle\img\section\image2.jpg" />
+    <Content Include="MyStyle\img\section\image3.jpg" />
+    <Content Include="MyStyle\img\section\image4.jpg" />
+    <Content Include="MyStyle\img\section\image5.jpg" />
+    <Content Include="MyStyle\img\section\image6.jpg" />
+    <Content Include="MyStyle\img\sellers\img1.png" />
+    <Content Include="MyStyle\img\sellers\img2.png" />
+    <Content Include="MyStyle\img\sellers\img3.png" />
+    <Content Include="MyStyle\img\sellers\img4.png" />
+    <Content Include="MyStyle\img\sellers\img5.png" />
+    <Content Include="MyStyle\img\sellers\img6.png" />
+    <Content Include="MyStyle\img\service\service1.jpg" />
+    <Content Include="MyStyle\img\service\service2.jpg" />
+    <Content Include="MyStyle\img\service\service3.jpg" />
+    <Content Include="MyStyle\img\slide1.jpg" />
+    <Content Include="MyStyle\img\slide3.jpg" />
+    <Content Include="MyStyle\img\sprite-skin-flat.png" />
+    <Content Include="MyStyle\img\unused\banner.jpg" />
+    <Content Include="MyStyle\img\unused\dubai.jpg" />
+    <Content Include="MyStyle\img\unused\slide2.jpg" />
+    <Content Include="MyStyle\img\whats-new\post-lg.jpg" />
+    <Content Include="MyStyle\img\whats-new\post.jpg" />
+    <Content Include="MyStyle\img\whats-new\post1.jpg" />
+    <Content Include="MyStyle\img\whats-new\post2.jpg" />
+    <Content Include="MyStyle\img\whats-new\post3.jpg" />
+    <Content Include="MyStyle\img\whats-new\post4.jpg" />
+    <Content Include="MyStyle\js\category.js" />
+    <Content Include="MyStyle\js\custom.js" />
+    <Content Include="MyStyle\js\easy-editable-text.js" />
+    <Content Include="MyStyle\js\faq.js" />
+    <Content Include="MyStyle\js\geo_Address.js" />
+    <Content Include="MyStyle\js\jquery.min.js" />
+    <Content Include="MyStyle\js\jquery.mixitup.min.js" />
+    <Content Include="MyStyle\js\jquery.spincrement.min.js" />
+    <Content Include="MyStyle\js\js.js" />
+    <Content Include="MyStyle\js\kl-custom.js" />
+    <Content Include="MyStyle\js\kl-plugins.js" />
+    <Content Include="MyStyle\js\kl-scripts.js" />
+    <Content Include="MyStyle\js\modernizr.js" />
+    <Content Include="MyStyle\js\modernizr.min.js" />
+    <Content Include="MyStyle\js\plugins\scrollme\jquery.scrollme.js" />
+    <Content Include="MyStyle\js\plugins\scrollme\jquery.scrollme.min.js" />
+    <Content Include="MyStyle\js\plugins\sparkles.js" />
+    <Content Include="MyStyle\js\plugins\_sliders\caroufredsel\jquery.carouFredSel-packed.js" />
+    <Content Include="MyStyle\js\plugins\_sliders\caroufredsel\jquery.carouFredSel-packed.min.js" />
+    <Content Include="MyStyle\js\price-table.js" />
+    <Content Include="MyStyle\js\scrolling-nav.js" />
+    <Content Include="MyStyle\js\wickedpicker.js" />
+    <Content Include="MyStyle\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="MyStyle\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="MyStyle\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="MyStyle\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="MyStyle\vendor\bootstrap\css\bootstrap-select.css" />
+    <Content Include="MyStyle\vendor\bootstrap\css\bootstrap-select.min.css" />
+    <Content Include="MyStyle\vendor\bootstrap\css\bootstrap-tagsinput.css" />
+    <Content Include="MyStyle\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="MyStyle\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="MyStyle\vendor\bootstrap\js\bootstrap-select.js" />
+    <Content Include="MyStyle\vendor\bootstrap\js\bootstrap-select.min.js" />
+    <Content Include="MyStyle\vendor\bootstrap\js\bootstrap-tagsinput.js" />
+    <Content Include="MyStyle\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="MyStyle\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="MyStyle\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="MyStyle\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="MyStyle\vendor\ion.rangeslider\ion.rangeSlider.css" />
+    <Content Include="MyStyle\vendor\ion.rangeslider\ion.rangeSlider.js" />
+    <Content Include="MyStyle\vendor\ion.rangeslider\ion.rangeSlider.skinFlat.css" />
+    <Content Include="MyStyle\vendor\ion.rangeslider\normalize.css" />
+    <Content Include="MyStyle\vendor\jquery-easing\jquery.easing.compatibility.js" />
+    <Content Include="MyStyle\vendor\jquery-easing\jquery.easing.js" />
+    <Content Include="MyStyle\vendor\jquery-easing\jquery.easing.min.js" />
+    <Content Include="MyStyle\vendor\jquery\jquery.js" />
+    <Content Include="MyStyle\vendor\jquery\jquery.min.js" />
+    <Content Include="MyStyle\vendor\jquery\jquery.mobile.custom.min.js" />
+    <Content Include="MyStyle\vendor\jquery\jquery.slim.js" />
+    <Content Include="MyStyle\vendor\jquery\jquery.slim.min.js" />
+    <Content Include="MyStyle\vendor\remodal\css\remodal-default-theme.css" />
+    <Content Include="MyStyle\vendor\remodal\css\remodal.css" />
+    <Content Include="MyStyle\vendor\remodal\js\remodal.js" />
+    <Content Include="MyStyle\vendor\remodal\js\remodal.min.js" />
+    <Content Include="packages.config" />
+    <Content Include="Master1.Master" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Master2.Master" />
+    <Content Include="Master3.Master" />
+    <Content Include="MasterM.Master" />
+    <Content Include="MasterA.Master" />
+    <Content Include="RoomDisp.aspx" />
+    <Content Include="WebService1.asmx" />
+    <Content Include="MyStyle\assets\plugins.zip" />
+    <Content Include="MyStyle\assets\plugins\fonts\fontello.eot" />
+    <Content Include="MyStyle\assets\plugins\fonts\fontello.ttf" />
+    <Content Include="MyStyle\assets\plugins\fonts\fontello.woff" />
+    <Content Include="MyStyle\fonts\fontawesome-webfont.eot" />
+    <Content Include="MyStyle\fonts\fontawesome-webfont.ttf" />
+    <Content Include="MyStyle\fonts\fontawesome-webfont.woff" />
+    <Content Include="MyStyle\fonts\fontawesome-webfont.woff2" />
+    <Content Include="MyStyle\fonts\FontAwesome.otf" />
+    <Content Include="MyStyle\fonts\fontello.eot" />
+    <Content Include="MyStyle\fonts\fontello.ttf" />
+    <Content Include="MyStyle\fonts\fontello.woff" />
+    <Content Include="MyStyle\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="MyStyle\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="MyStyle\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="MyStyle\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="MyStyle\fonts\Stroke-Gap-Icons-Webfont\fonts\Stroke-Gap-Icons.eot" />
+    <Content Include="MyStyle\fonts\Stroke-Gap-Icons-Webfont\fonts\Stroke-Gap-Icons.ttf" />
+    <Content Include="MyStyle\fonts\Stroke-Gap-Icons-Webfont\fonts\Stroke-Gap-Icons.woff" />
+    <Content Include="MyStyle\font\AVERTADEMO-EXTRABOLDITALIC.OTF" />
+    <Content Include="MyStyle\font\AVERTADEMO-EXTRABOLDITALIC.TTF" />
+    <Content Include="MyStyle\font\AVERTADEMO-REGULAR.OTF" />
+    <Content Include="MyStyle\font\AVERTADEMO-REGULAR.TTF" />
+    <Content Include="MyStyle\font\TIEMPO-BOLD.TTF" />
+    <Content Include="MyStyle\partials\_layout.scss" />
+    <Content Include="MyStyle\partials\_mixins.scss" />
+    <Content Include="MyStyle\partials\_variables.scss" />
+    <Content Include="MyStyle\vendor\bootstrap\css\bootstrap-select.css.map" />
+    <Content Include="MyStyle\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="MyStyle\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="MyStyle\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="MyStyle\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="MyStyle\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="MyStyle\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="MyStyle\vendor\jquery\jquery.min.map" />
+    <Content Include="MyStyle\vendor\jquery\jquery.slim.min.map" />
+    <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="ProfileAdmin.aspx" />
+    <Content Include="ProfileManager.aspx" />
+    <Content Include="ProfileMember.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="SearchRooms.aspx" />
+    <Content Include="SeeRooms.aspx" />
+    <Content Include="SetPrice.aspx" />
+    <Content Include="SignUpMember.aspx" />
+    <Content Include="UpdateMember.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Activation.aspx.cs">
+      <DependentUpon>Activation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Activation.aspx.designer.cs">
+      <DependentUpon>Activation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddRoom.aspx.cs">
+      <DependentUpon>AddRoom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddRoom.aspx.designer.cs">
+      <DependentUpon>AddRoom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApprovePrice.aspx.cs">
+      <DependentUpon>ApprovePrice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApprovePrice.aspx.designer.cs">
+      <DependentUpon>ApprovePrice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApproveRooms.aspx.cs">
+      <DependentUpon>ApproveRooms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApproveRooms.aspx.designer.cs">
+      <DependentUpon>ApproveRooms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.designer.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.designer.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConfRoom.aspx.cs">
+      <DependentUpon>ConfRoom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConfRoom.aspx.designer.cs">
+      <DependentUpon>ConfRoom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\myDAL.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master1.Master.cs">
+      <DependentUpon>Master1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master1.Master.designer.cs">
+      <DependentUpon>Master1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Master2.Master.cs">
+      <DependentUpon>Master2.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master2.Master.designer.cs">
+      <DependentUpon>Master2.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Master3.Master.cs">
+      <DependentUpon>Master3.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master3.Master.designer.cs">
+      <DependentUpon>Master3.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterA.Master.cs">
+      <DependentUpon>MasterA.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterA.Master.designer.cs">
+      <DependentUpon>MasterA.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterM.Master.cs">
+      <DependentUpon>MasterM.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterM.Master.designer.cs">
+      <DependentUpon>MasterM.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileAdmin.aspx.cs">
+      <DependentUpon>ProfileAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProfileAdmin.aspx.designer.cs">
+      <DependentUpon>ProfileAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileManager.aspx.cs">
+      <DependentUpon>ProfileManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProfileManager.aspx.designer.cs">
+      <DependentUpon>ProfileManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileMember.aspx.cs">
+      <DependentUpon>ProfileMember.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProfileMember.aspx.designer.cs">
+      <DependentUpon>ProfileMember.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoomDisp.aspx.cs">
+      <DependentUpon>RoomDisp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RoomDisp.aspx.designer.cs">
+      <DependentUpon>RoomDisp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchRooms.aspx.cs">
+      <DependentUpon>SearchRooms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchRooms.aspx.designer.cs">
+      <DependentUpon>SearchRooms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SeeRooms.aspx.cs">
+      <DependentUpon>SeeRooms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SeeRooms.aspx.designer.cs">
+      <DependentUpon>SeeRooms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SetPrice.aspx.cs">
+      <DependentUpon>SetPrice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SetPrice.aspx.designer.cs">
+      <DependentUpon>SetPrice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SignUpMember.aspx.cs">
+      <DependentUpon>SignUpMember.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignUpMember.aspx.designer.cs">
+      <DependentUpon>SignUpMember.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateMember.aspx.cs">
+      <DependentUpon>UpdateMember.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateMember.aspx.designer.cs">
+      <DependentUpon>UpdateMember.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebService1.asmx.cs">
+      <DependentUpon>WebService1.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="MyStyle\vendor\price-table\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ADODB">
+      <Guid>{00000205-0000-0010-8000-00AA006D2EA4}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:10192/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
