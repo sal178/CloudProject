@@ -19,7 +19,7 @@
 						</ol>
 						<div class="carousel-inner">
 							<div class="item active">
-								<img src="Images/room1.jpg"  class="mySize"/>
+								<img src="https://res.cloudinary.com/db6jmijeu/image/upload/v1525019188/room1.jpg"  class="mySize"/>
 								<div class="carousel-caption">
 									<h4>
 										Luxurious Rooms
@@ -28,7 +28,7 @@
 								</div>
 							</div>
 							<div class="item">
-								<img src="Images/room2.jpg" class="mySize" />
+								<img src="https://res.cloudinary.com/db6jmijeu/image/upload/v1525019189/room2.jpg" class="mySize" />
 								<div class="carousel-caption">
 									<h4>
 									We put your comfort first
@@ -37,7 +37,7 @@
 								</div>
 							</div>
 							<div class="item">
-								<img src="Images/room3.jpg" class="mySize" />
+								<img src="https://res.cloudinary.com/db6jmijeu/image/upload/v1525019202/room3.jpg" class="mySize" />
 								<div class="carousel-caption">
 									<h4>
                                         Quality better than all others
