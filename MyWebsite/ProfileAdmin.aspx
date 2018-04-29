@@ -29,7 +29,7 @@
 				</h2>
     <br />
 <a class="stylish-button" href="AddRoom.aspx">Add Rooms</a><br />
-    <a class="stylish-button" href="WebService1.asmx">Show Rooms</a><br />
+    <a class="stylish-button" href="RoomDisp.aspx">Show Rooms</a><br />
 
 <a class="stylish-button" href="ConfRoom.aspx">Configure Rooms</a><br />
 
